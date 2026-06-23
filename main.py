@@ -13,7 +13,7 @@ API_KEY = os.getenv("DELTA_API_KEY")
 API_SECRET = os.getenv("DELTA_API_SECRET")
 BASE_URL = "https://delta.exchange"
 PRODUCT_ID = 27  # BTCUSD Perpetual Contract ID on Delta Exchange
-TRADE_SIZE = int(os.getenv("TRADE_SIZE", 10))
+TRADE_SIZE = int(os.getenv("TRADE_SIZE", 0.1))
 
 def generate_signature(method, path, expiry, payload=""):
     message = method + str(expiry) + path + payload
